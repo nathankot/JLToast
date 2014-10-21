@@ -13,6 +13,7 @@
 		03106A2D199E04D0002886D2 /* JLToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03106A2A199E04D0002886D2 /* JLToast.swift */; };
 		03106A2E199E04D0002886D2 /* JLToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03106A2B199E04D0002886D2 /* JLToastCenter.swift */; };
 		03106A2F199E04D0002886D2 /* JLToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03106A2C199E04D0002886D2 /* JLToastView.swift */; };
+		0354A98219C0ED3E00CE7AC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0354A98119C0ED3E00CE7AC4 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 		03106A2A199E04D0002886D2 /* JLToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToast.swift; sourceTree = "<group>"; };
 		03106A2B199E04D0002886D2 /* JLToastCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastCenter.swift; sourceTree = "<group>"; };
 		03106A2C199E04D0002886D2 /* JLToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastView.swift; sourceTree = "<group>"; };
-		03925CFD199F23EA0095A3CA /* JLToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLToast.h; sourceTree = "<group>"; };
+		0354A98119C0ED3E00CE7AC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				03106A0A199E0347002886D2 /* AppDelegate.h */,
 				03106A0B199E0347002886D2 /* AppDelegate.m */,
 				03106A29199E04D0002886D2 /* JLToast */,
+				0354A98119C0ED3E00CE7AC4 /* Images.xcassets */,
 				03106A06199E0347002886D2 /* Supporting Files */,
 			);
 			path = JLToastObjcSample;
@@ -116,7 +118,6 @@
 		03106A29199E04D0002886D2 /* JLToast */ = {
 			isa = PBXGroup;
 			children = (
-				03925CFD199F23EA0095A3CA /* JLToast.h */,
 				03106A2A199E04D0002886D2 /* JLToast.swift */,
 				03106A2B199E04D0002886D2 /* JLToastCenter.swift */,
 				03106A2C199E04D0002886D2 /* JLToastView.swift */,
@@ -205,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0354A98219C0ED3E00CE7AC4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +335,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JLToastObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -344,8 +348,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JLToastObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

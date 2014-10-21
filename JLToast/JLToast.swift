@@ -19,9 +19,10 @@
 
 import UIKit
 
-public struct JLToastDelay {
-    public static let ShortDelay: NSTimeInterval = 2.0
-    public static let LongDelay: NSTimeInterval = 3.5
+// 이게 좋을지
+@objc public class JLToastDelay {
+    public class var ShortDelay: NSTimeInterval { return 2.0 }
+    public class var LongDelay: NSTimeInterval { return 3.5 }
 }
 
 public struct JLToastViewValue {
@@ -39,6 +40,10 @@ public struct JLToastViewValue {
 }
 
 @objc public class JLToast: NSOperation {
+    // 아니면 이게 좋을지?
+    public class var ShortDelay: NSTimeInterval { return 2.0 }
+    public class var LongDelay: NSTimeInterval { return 3.5 }
+
     var _view: JLToastView?
     
     var text: String {

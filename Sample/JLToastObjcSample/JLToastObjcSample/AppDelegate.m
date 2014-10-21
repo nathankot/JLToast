@@ -16,7 +16,6 @@
  */
 
 #import <JLToastObjcSample-Swift.h>
-#import "JLToast.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
@@ -25,23 +24,23 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
-    
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(10, 10, 300, 60);
     [button setTitle:@"Show" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
-    [self.window addSubview:button];
+    [self.window.rootViewController.view addSubview:button];
     
     return YES;
 }
 
 - (void)showButtonTouchUpInside
 {
-    
     [[JLToast makeText:@"Basic JLToast"] show];
     [[JLToast makeText:@"You can set duration. `JLToastDelay.ShortDelay` means 2 seconds.\n"
-                        "JLToastDelay.LongDelay` means 3.5 seconds." duration:JLToastLongDelay] show];
+                        "JLToastDelay.LongDelay` means 3.5 seconds." duration:JLToastDelay.LongDelay] show];
     [[JLToast makeText:@"With delay, JLToast will be shown after delay." delay:1 duration:5] show];
 }
 
