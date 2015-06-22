@@ -28,12 +28,12 @@ public let JLToastViewPortraitOffsetYAttributeName = "JLToastViewPortraitOffsetY
 public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffsetYAttributeName"
 
 @objc public class JLToastView: UIView {
-    
-    var backgroundView: UIView!
-    var textLabel: UILabel!
-    var textInsets: UIEdgeInsets!
-    
-    init() {
+
+    public var backgroundView: UIView!
+    public var textLabel: UILabel!
+    public var textInsets: UIEdgeInsets!
+
+    public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 
         let userInterfaceIdiom = UIDevice.currentDevice().userInterfaceIdiom
@@ -73,11 +73,11 @@ public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffse
             forUserInterfaceIdiom: userInterfaceIdiom
         ) as! NSValue).UIEdgeInsetsValue()
     }
-    
-    required convenience public init(coder aDecoder: NSCoder) {
-        self.init()
+
+    public required convenience init(coder aDecoder: NSCoder) {
+      self.init()
     }
-    
+
     func updateView() {
         let deviceWidth = CGRectGetWidth(UIScreen.mainScreen().bounds)
         let font = self.textLabel.font
@@ -135,7 +135,7 @@ public let JLToastViewLandscapeOffsetYAttributeName = "JLToastViewLandscapeOffse
         y = height - (backgroundViewSize.height + y)
         self.frame = CGRect(x: x, y: y, width: backgroundViewSize.width, height: backgroundViewSize.height);
     }
-    
+
     override public func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView? {
         if let superview = self.superview {
             let pointInWindow = self.convertPoint(point, toView: self.superview)
